@@ -47,6 +47,17 @@
       text-decoration: none;
       font-size: 18px;      
     }
+
+.InvieHero-logo{
+    transition: all 0.3s ease-in;
+  }
+
+.InvieHero-logo:hover{
+      /*Puedo aplicarle filtros filtros*/
+      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="4" /></filter></svg>#filter');
+      -webkit-filter:blur(4px);
+              filter:blur(4px);
+    }
 .InvieFooter{
   background-color: #273b47;
 }

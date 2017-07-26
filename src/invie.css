@@ -48,6 +48,13 @@
       font-size: var(--fontSize);      
     }
   }
+  &-logo{
+    transition: all 0.3s ease-in;
+    &:hover{
+      /*Puedo aplicarle filtros filtros*/
+      filter:blur(4px);
+    }
+  }
 }
 .InvieFooter{
   background-color: var(--bg-footer);
