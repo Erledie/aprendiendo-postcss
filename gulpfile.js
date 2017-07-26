@@ -3,6 +3,7 @@ var postcss = require('gulp-postcss')
 var cssnext = require('postcss-cssnext')
 //var autoprefixer = require('autoprefixer')
 var cssnested = require('postcss-nested')
+var mixins = require('postcss-mixins')
 var browserSync = require('browser-sync').create()//Para inicializar
 
 //Inicializar Servidor de web
@@ -20,6 +21,7 @@ gulp.task('css',function(){
 		/*autoprefixer({
 			browsers:['>5%','ie 8']//lo que hace esto es colocar los prefijos para los navegadores que se usen mas del 5%, ademas da soporte a internet explorer 8+
 		}),*///Este es para los prefijos
+		mixins(),//Este es para que maneje mixins que son como funciones que pueden tener parametros, esto lo que hace es que si tengo varios estilos muy parecidos que solo cambian los valores de algunas propiedades entonces lo que hago es un mixin
 		cssnested, //Este es para que maneje una sintaxis como la de los preprocesadores en el caso de anidar estilos sin tener que escribir varias veces el mismo selector
 		cssnext({browsers:['>5%','ie 8']})//Para usar css del futuro, con lo que por ejemplo, ya no haria falta los prefijos
 
