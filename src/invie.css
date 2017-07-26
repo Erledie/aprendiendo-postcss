@@ -2,9 +2,7 @@
   --bg-body: #fafafa;
   --bg-header: #466173;
   --bg-footer: #273b47;
-}
-a{
-  color: var(--mainColor);
+  --fontSize: 18px;
 }
 .InvieHero{
 	padding: 20px;
@@ -16,6 +14,11 @@ a{
 		flex-direction: row;
 		justify-content: space-between;
 	}
+  &-copy{
+    &-title{
+      font-size: calc(var(--fontSize) * 3);
+    }
+  }
 }
 .InvieFooter{
   background-color: var(--bg-footer);

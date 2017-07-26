@@ -1,6 +1,3 @@
-a{
-  color: var(--mainColor);
-}
 .InvieHero{
 	padding: 20px;
 	height: 500px;
@@ -16,6 +13,9 @@ a{
 		-webkit-box-pack: justify;
 		        justify-content: space-between;
 	}
+.InvieHero-copy-title{
+      font-size: 54px;
+    }
 .InvieFooter{
   background-color: #273b47;
 }
