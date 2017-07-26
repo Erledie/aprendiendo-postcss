@@ -3,22 +3,69 @@
   /*lightness lo que hace es colocarle claridad al color*/
   /*hue lo que hace es colocarle mas cambio al color*/
 }
-/*Custom Media queries*/
+
+@media @custom-media --movil (max-width: 500px){
+
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?6s6d3k');
+    src:    url('../fonts/icomoon.eot?6s6d3k#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?6s6d3k') format('truetype'),
+        url('../fonts/icomoon.woff?6s6d3k') format('woff'),
+        url('../fonts/icomoon.svg?6s6d3k#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-feature-settings: normal;
+            font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-envelope:before {
+    content: "\e900";
+}
+.icon-phone:before {
+    content: "\e901";
+}
+.icon-menu:before {
+    content: "\e902";
+}
+.icon-close:before {
+    content: "\e903";
+}
+}
 /*Mixins
 Los Mixins son como funciones con parametros
 */
+
 .InvieHero{
 	padding: 20px;
 	height: 500px;
   background: url('../images/background.png') #466173;
 }
 /*Se puede llamar la media query desde aca*/
+
 @media(-webkit-min-device-pixel-ratio:2){
-.InvieHero{
+
+  .InvieHero{
     background-image: url('../images/background2x.png')
 }
   }
 /*Esto me lo permite el pluing de nested, con esto se llamara a la clase.InvieHero-header*/
+
 .InvieHero-header{
 		display: -webkit-box;
 		display: flex;
@@ -28,9 +75,11 @@ Los Mixins son como funciones con parametros
 		-webkit-box-pack: justify;
 		        justify-content: space-between;
 	}
+
 .InvieHero-copy-title{
       font-size: 54px;
     }
+
 .InvieHero-copy-btn{
       /*Se llama como si fuera una funcion*/
       /*para usar parametros de entrada se definen con $ */
@@ -43,18 +92,22 @@ Los Mixins son como funciones con parametros
       cursor: pointer;
       text-decoration: none;
       font-size: 18px}
+
 .InvieHero-logo{
     transition: all 0.3s ease-in;
   }
+
 .InvieHero-logo:hover{
       /*Puedo aplicarle filtros filtros*/
       filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="4" /></filter></svg>#filter');
       -webkit-filter:blur(4px);
               filter:blur(4px);
     }
+
 .InvieFooter{
   background-color: #273b47;
 }
+
 .InvieFooter-form-btn{
       /*para usar parametros de entrada se definen con $ */
       background: #fd324e;

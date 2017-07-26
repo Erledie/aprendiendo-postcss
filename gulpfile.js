@@ -4,6 +4,7 @@ var cssnext = require('postcss-cssnext')
 //var autoprefixer = require('autoprefixer')
 var cssnested = require('postcss-nested')
 var mixins = require('postcss-mixins')
+var atImport = require('postcss-import')
 var browserSync = require('browser-sync').create()//Para inicializar
 
 //Inicializar Servidor de web
@@ -21,13 +22,14 @@ gulp.task('css',function(){
 		/*autoprefixer({
 			browsers:['>5%','ie 8']//lo que hace esto es colocar los prefijos para los navegadores que se usen mas del 5%, ademas da soporte a internet explorer 8+
 		}),*///Este es para los prefijos
+		atImport(),//Para importar archivos css
 		mixins(),//Este es para que maneje mixins que son como funciones que pueden tener parametros, esto lo que hace es que si tengo varios estilos muy parecidos que solo cambian los valores de algunas propiedades entonces lo que hago es un mixin
 		cssnested, //Este es para que maneje una sintaxis como la de los preprocesadores en el caso de anidar estilos sin tener que escribir varias veces el mismo selector
 		cssnext({browsers:['>5%','ie 8']})//Para usar css del futuro, con lo que por ejemplo, ya no haria falta los prefijos
 
 	]
 	//Esto lo que hace es leer todos los archivo css que esten en src que es donde estaran los archivos de desarrollo
-	return gulp.src('./src/*.css')
+	return gulp.src('./src/invie.css')
 		.pipe(postcss(processors))
 		.pipe(gulp.dest('./dist/css'))//Funcion que hace que el los archivos ya procesados los deje en la carpeta del proyecto de produccion
 		.pipe(browserSync.stream())

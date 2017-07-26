@@ -1,17 +1,5 @@
-:root{
-  --bg-body: #fafafa;
-  --bg-header: #466173;
-  --bg-footer: #273b47;
-  
-  --fontSize: 18px;
-  
-  --btn-gradient: #fd324e;
-  /*blackness lo que hace es colocarle oscuridad al color*/
-  --btn-gradient-start: color(var(--btn-gradient) blackness(30%));
-  /*lightness lo que hace es colocarle claridad al color*/
-  /*hue lo que hace es colocarle mas cambio al color*/
-  --btn-gradient-end: color(var(--btn-gradient) lightness(+10%) hue(10%));
-}
+@import './variables-css.css';
+@import './fonts.css'
 /*Custom Media queries*/
 @custom-media --movil (max-width: 500px);
 @custom-media --table (max-width: 650px);
