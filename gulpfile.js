@@ -8,6 +8,7 @@ var mixins = require('postcss-mixins')
 var lost = require('lost')
 var atImport = require('postcss-import')
 var csswring = require('csswring')
+var mqpacker = require('css-mqpacker')
 var browserSync = require('browser-sync').create()//Para inicializar
 
 //Inicializar Servidor de web
@@ -31,6 +32,7 @@ gulp.task('css',function(){
 		lost(),//Este se maneja para manejar grillas de una forma mas facil pues este crea los calculos segun las grillas que nosotros deseamos(recordar que el standar es que una pantalla se divida en 12 grillas)
 		rucksack(),//Este convierte todo teniendo en cuenta las habilidades automaticas que tiene rucksack
 		cssnext({browsers:['>5%','ie 8']}),//Para usar css del futuro, con lo que por ejemplo, ya no haria falta los prefijos
+		mqpacker,//Con este todos los mediaquerie se van al final y agrupa segun el mediaquerie que se tenga, mejor dicho ordena todo el css
 		csswring(),//Es para minifica el css
 
 	]
