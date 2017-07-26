@@ -39,7 +39,10 @@ Los Mixins son como funciones con parametros
 	}
   &-copy{
     &-title{
-      font-size: calc(var(--fontSize) * 3);
+      color: var(--bg-body);
+      /*El responsive es una propiedad de rucksack que hace que el tamaño de letra sea responsive segun el tamaño de la pantalla*/
+      /*El primer valor es el minimo que queremos que tenga y el segundo es el maximo*/
+      font-size: responsive 32px 70px;
     }
     &-btn{
       /*Se llama como si fuera una funcion*/
