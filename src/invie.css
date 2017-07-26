@@ -70,6 +70,31 @@ Los Mixins son como funciones con parametros
     }
   }
 }
+.u-scrollContainer{
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
+  font-size: 0;
+  &-itemContainer{
+    border: 1px solid var(--border-feature);
+    border-radius: 8px;
+    width: 98%;
+    margin: 1%;
+    display: inline-block;
+    line-height: 18px;
+    font-size: 18px;
+  }
+  &-itemContent{
+    display: flex;
+    & > img{
+      width: auto;
+      height: 25vh
+    } 
+  }
+}
 /*[class^="icon-"], [class*=" icon-"] {
 
     font-family: 'icomoon' !important;

@@ -119,6 +119,38 @@ Los Mixins son como funciones con parametros
       cursor: pointer;
       text-decoration: none;
       font-size: 18px}
+
+.u-scrollContainer{
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  -webkit-scroll-snap-points-x: repeat(100%);
+          scroll-snap-points-x: repeat(100%);
+  -webkit-scroll-snap-type: mandatory;
+          scroll-snap-type: mandatory;
+  font-size: 0;
+}
+
+.u-scrollContainer-itemContainer{
+    border: 1px solid #1F313C;
+    border-radius: 8px;
+    width: 98%;
+    margin: 1%;
+    display: inline-block;
+    line-height: 18px;
+    font-size: 18px;
+  }
+
+.u-scrollContainer-itemContent{
+    display: -webkit-box;
+    display: flex; 
+  }
+
+.u-scrollContainer-itemContent > img{
+      width: auto;
+      height: 25vh
+    }
 /*[class^="icon-"], [class*=" icon-"] {
 
     font-family: 'icomoon' !important;

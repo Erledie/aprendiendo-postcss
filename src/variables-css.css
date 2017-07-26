@@ -11,4 +11,5 @@
   /*lightness lo que hace es colocarle claridad al color*/
   /*hue lo que hace es colocarle mas cambio al color*/
   --btn-gradient-end: color(var(--btn-gradient) lightness(+10%) hue(10%));
+  --border-feature:#1F313C;
 }
