@@ -1,3 +1,8 @@
+:root{
+  /*blackness lo que hace es colocarle oscuridad al color*/
+  /*lightness lo que hace es colocarle claridad al color*/
+  /*hue lo que hace es colocarle mas cambio al color*/
+}
 /*Custom Media queries*/
 
 .InvieHero{
@@ -29,6 +34,18 @@
 
 .InvieHero-copy-title{
       font-size: 54px;
+    }
+
+.InvieHero-copy-btn{
+      background: #fd324e;
+      background: linear-gradient(to left, rgb(179, 51, 68), rgb(253, 124, 98));
+      border-radius: 12px;
+      border: none;
+      color: #fafafa;
+      padding: 7px 12px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 18px;      
     }
 .InvieFooter{
   background-color: #273b47;
@@ -128,17 +145,6 @@ input:focus, textarea:focus {
   background-size: cover;
 }
 
-.button {
-  border-radius: 12px;
-  border: none;
-  color: white;
-  padding: 7px 12px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 18px;
-  background: #fd324e;
-  background: linear-gradient(to left, #fe344e, #ff7250);
-}
 
 .titulo {
   font-family: 'Montserrat', sans-serif;
