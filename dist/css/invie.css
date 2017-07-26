@@ -1,9 +1,22 @@
+/*Custom Media queries*/
+
 .InvieHero{
 	padding: 20px;
 	height: 500px;
-  background-color: #466173;
+  background: url('../images/background.png') #466173;
 }
+
+/*Se puede llamar la media query desde aca*/
+
+@media(-webkit-min-device-pixel-ratio:2){
+
+.InvieHero{
+    background-image: url('../images/background2x.png')
+}
+  }
+
 /*Esto me lo permite el pluing de nested, con esto se llamara a la clase.InvieHero-header*/
+
 .InvieHero-header{
 		display: -webkit-box;
 		display: flex;
@@ -13,6 +26,7 @@
 		-webkit-box-pack: justify;
 		        justify-content: space-between;
 	}
+
 .InvieHero-copy-title{
       font-size: 54px;
     }

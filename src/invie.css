@@ -4,10 +4,20 @@
   --bg-footer: #273b47;
   --fontSize: 18px;
 }
+/*Custom Media queries*/
+@custom-media --movil (max-width: 500px);
+@custom-media --table (max-width: 650px);
+@custom-media --desktop (max-width: 800px);
+@custom-media --retina (-webkit-min-device-pixel-ratio:2);
+
 .InvieHero{
 	padding: 20px;
 	height: 500px;
-  background-color: var(--bg-header);
+  background: url('../images/background.png') var(--bg-header);
+  /*Se puede llamar la media query desde aca*/
+  @media(--retina){
+    background-image: url('../images/background2x.png')
+  }
 	/*Esto me lo permite el pluing de nested, con esto se llamara a la clase.InvieHero-header*/
 	&-header{
 		display: flex;
